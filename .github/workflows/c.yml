@@ -121,7 +121,7 @@ jobs:
 
       - name: Upload coverage to Codecov
         if: steps.coverage.outputs.info != ''
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           files: c/${{ matrix.subproject }}/src/${{ steps.coverage.outputs.info }}
           flags: c-${{ matrix.subproject }}

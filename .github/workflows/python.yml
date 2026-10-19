@@ -171,7 +171,7 @@ jobs:
         run: |
           pytest -v --cov=. --cov-report=xml --cov-report=term || true
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           files: ${{ matrix.workdir }}/coverage.xml
           flags: ${{ matrix.flag }}
@@ -218,7 +218,7 @@ jobs:
           QT_QPA_PLATFORM: offscreen
         run: pytest --cov-report=xml
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           files: python/SmartCalc_v3.0/coverage.xml
           flags: python-SmartCalc_v3.0
